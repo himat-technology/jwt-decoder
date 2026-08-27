@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #030712;
+    color: #f3f4f6;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0b0f19;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1f293d;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #374151;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(51, 65, 85, 0.45);
+  }
+
+  .glass-card-hover {
+    transition: all 0.2s ease-in-out;
+  }
+  .glass-card-hover:hover {
+    border-color: rgba(94, 234, 212, 0.35);
+    box-shadow: 0 10px 25px -5px rgba(20, 184, 166, 0.08);
+  }
+
+  .glow-header {
+    box-shadow: 0 0 20px -5px rgba(244, 63, 94, 0.15);
+  }
+
+  .glow-payload {
+    box-shadow: 0 0 20px -5px rgba(168, 85, 247, 0.15);
+  }
+
+  .glow-signature {
+    box-shadow: 0 0 20px -5px rgba(20, 184, 166, 0.15);
+  }
+}
